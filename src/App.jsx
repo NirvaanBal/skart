@@ -13,11 +13,12 @@ function App() {
   const addToCart = (e) => {
     const bookId = +e.target.dataset.id;
     const book = books.find((book) => book.id === bookId);
-    setCart([...cart, book]);
+    setCart(cart.concat(book));
   };
 
   const removeFromCart = (e) => {
-    // remove from cart logic goes here
+    const bookId = +e.target.dataset.id;
+    setCart([...cart].filter((book) => book.id !== bookId));
   };
 
   return (
