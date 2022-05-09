@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './routes/Home';
 import Cart from './routes/Cart';
 import NotFound from './routes/NotFound';
+import data from './data.json';
 
 function App() {
+  const [books, setBooks] = useState(data);
+
   return (
     <Router>
       <header>
@@ -12,7 +16,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home books={books} />} />
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
