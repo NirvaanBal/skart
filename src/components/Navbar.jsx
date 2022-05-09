@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ items }) {
   return (
     <nav>
       <ul>
@@ -8,7 +8,7 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">Cart {items === 0 ? `` : `(${items})`}</Link>
         </li>
       </ul>
     </nav>

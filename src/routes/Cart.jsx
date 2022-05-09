@@ -4,7 +4,7 @@ import Button from '../components/Button';
 function Cart({ cart, removeFromCart }) {
   return (
     <div className="cart">
-      <h2>Cart ({cart.length})</h2>
+      <h2>Cart</h2>
       {cart && cart.length > 0 ? (
         <section className="items">
           {cart.map((book) => (

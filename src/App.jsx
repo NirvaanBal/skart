@@ -25,7 +25,7 @@ function App() {
     <Router>
       <header>
         <h1>Skart</h1>
-        <Navbar />
+        <Navbar items={cart.length > 0 ? cart.length : 0} />
       </header>
       <main>
         <Routes>
