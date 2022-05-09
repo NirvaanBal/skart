@@ -17,7 +17,10 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home books={books} />} />
+          <Route
+            path="/"
+            element={<Home books={books} addToCart={addToCart} />}
+          />
           <Route path="cart" element={<Cart cart={cart} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

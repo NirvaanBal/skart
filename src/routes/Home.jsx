@@ -1,7 +1,7 @@
 import Book from '../components/Book';
 import Button from '../components/Button';
 
-function Home({ books }) {
+function Home({ books, addToCart }) {
   return (
     <>
       <h1>Skart</h1>
@@ -9,7 +9,9 @@ function Home({ books }) {
         {books.map((book, index) => (
           <figure key={book.id}>
             <Book book={book} />
-            <Button id={book.id}>Add to Cart</Button>
+            <Button id={book.id} handleClick={addToCart}>
+              Add to Cart
+            </Button>
           </figure>
         ))}
       </div>
