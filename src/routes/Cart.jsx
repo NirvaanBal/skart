@@ -1,7 +1,7 @@
 import Book from '../components/Book';
 import Button from '../components/Button';
 
-function Cart({ cart }) {
+function Cart({ cart, removeFromCart }) {
   return (
     <>
       <h2>Cart</h2>
@@ -11,7 +11,7 @@ function Cart({ cart }) {
           {cart.map((book) => (
             <figure key={book.id}>
               <Book book={book} />
-              <Button id={book.id} handleClick={() => ``}>
+              <Button id={book.id} handleClick={removeFromCart}>
                 Remove from Cart
               </Button>
             </figure>

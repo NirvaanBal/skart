@@ -16,6 +16,10 @@ function App() {
     setCart([...cart, book]);
   };
 
+  const removeFromCart = (e) => {
+    // remove from cart logic goes here
+  };
+
   return (
     <Router>
       <header>
@@ -28,7 +32,10 @@ function App() {
             path="/"
             element={<Home books={books} addToCart={addToCart} />}
           />
-          <Route path="cart" element={<Cart cart={cart} />} />
+          <Route
+            path="cart"
+            element={<Cart cart={cart} removeFromCart={removeFromCart} />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
