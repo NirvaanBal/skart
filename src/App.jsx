@@ -19,6 +19,7 @@ function App() {
   return (
     <Router>
       <header>
+        <h1>Skart</h1>
         <Navbar />
       </header>
       <main>
