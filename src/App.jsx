@@ -10,6 +10,12 @@ function App() {
   const [books, setBooks] = useState(data);
   const [cart, setCart] = useState([]);
 
+  const addToCart = (e) => {
+    const bookId = +e.target.dataset.id;
+    const book = books.find((book) => book.id === bookId);
+    setCart([...cart, book]);
+  };
+
   return (
     <Router>
       <header>
