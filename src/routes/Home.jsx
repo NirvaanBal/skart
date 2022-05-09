@@ -4,7 +4,7 @@ import Button from '../components/Button';
 function Home({ books, addToCart }) {
   return (
     <>
-      <h2>Skart</h2>
+      <h2>All Books</h2>
       <div className="books">
         {books.map((book) => (
           <figure key={book.id}>
