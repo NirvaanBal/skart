@@ -52,7 +52,8 @@ nav {
   }
 }
 
-.home {
+.home,
+.cart {
   margin-top: 100px;
 
   h2 {
@@ -60,7 +61,8 @@ nav {
     text-align: center;
   }
 
-  .books {
+  .books,
+  .items {
     column-width: 300px;
     column-gap: 20px;
 
@@ -100,6 +102,16 @@ nav {
           background-color: $secondary-color;
         }
       }
+    }
+  }
+}
+
+.cart {
+  .items {
+    column-width: 200px;
+
+    figure {
+      padding: 10px;
     }
   }
 }

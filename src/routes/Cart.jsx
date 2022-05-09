@@ -3,11 +3,10 @@ import Button from '../components/Button';
 
 function Cart({ cart, removeFromCart }) {
   return (
-    <>
-      <h2>Cart</h2>
+    <div className="cart">
+      <h2>Cart ({cart.length})</h2>
       {cart && cart.length > 0 ? (
-        <div className="items">
-          <p>You have {cart.length} item(s) in your cart</p>
+        <section className="items">
           {cart.map((book) => (
             <figure key={book.id}>
               <Book book={book} width={100} cart={true} />
@@ -16,11 +15,11 @@ function Cart({ cart, removeFromCart }) {
               </Button>
             </figure>
           ))}
-        </div>
+        </section>
       ) : (
         <h3>Your cart is empty!</h3>
       )}
-    </>
+    </div>
   );
 }
 
