@@ -8,6 +8,7 @@ import data from './data.json';
 
 function App() {
   const [books, setBooks] = useState(data);
+  const [cart, setCart] = useState([]);
 
   return (
     <Router>
@@ -17,7 +18,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home books={books} />} />
-          <Route path="cart" element={<Cart />} />
+          <Route path="cart" element={<Cart cart={cart} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

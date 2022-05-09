@@ -5,18 +5,18 @@ function Book({ book }) {
     .toLowerCase()}.jpg`;
 
   return (
-    <figure>
-      <img src={bookImage} width="300" />
+    <>
+      <img loading="lazy" src={bookImage} width="300" />
       <figcaption>
         <h3>
-          {book.title} ({book.author})
+          {book.title} {book.author && `(${book.author})`}
         </h3>
         <h4>
           {'\u20B9'} {book.price}
         </h4>
         <p>{`${book.description.substring(0, 50)}...`}</p>
       </figcaption>
-    </figure>
+    </>
   );
 }
 

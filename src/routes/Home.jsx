@@ -1,14 +1,19 @@
 import Book from '../components/Book';
+import Button from '../components/Button';
 
 function Home({ books }) {
   return (
-    <div className="books">
-      {books.map((book) => (
-        <div className="book" key={book.id}>
-          <Book book={book} />
-        </div>
-      ))}
-    </div>
+    <>
+      <h1>Skart</h1>
+      <div className="books">
+        {books.map((book, index) => (
+          <figure key={book.id}>
+            <Book book={book} />
+            <Button id={book.id}>Add to Cart</Button>
+          </figure>
+        ))}
+      </div>
+    </>
   );
 }
 
