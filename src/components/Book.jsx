@@ -1,4 +1,4 @@
-function Book({ book }) {
+function Book({ book, width, cart }) {
   const bookImage = `../src/assets/${book.title
     .split(' ')
     .join('-')
@@ -6,7 +6,7 @@ function Book({ book }) {
 
   return (
     <>
-      <img loading="lazy" src={bookImage} width="300" />
+      <img loading="lazy" src={bookImage} width={width} />
       <figcaption>
         <h3>
           {book.title} {book.author && `(${book.author})`}
@@ -14,7 +14,7 @@ function Book({ book }) {
         <h4>
           {'\u20B9'} {book.price}
         </h4>
-        <p>{`${book.description.substring(0, 50)}...`}</p>
+        {!cart && <p>{`${book.description.substring(0, 50)}...`}</p>}
       </figcaption>
     </>
   );
