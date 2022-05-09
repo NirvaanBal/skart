@@ -1,0 +1,26 @@
+@forward 'typography';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+$text-color: #020122;
+$base-color: #f2f3ae;
+$primary-color: #f4442e;
+$secondary-color: #fc9e4f;
+$tertiary-color: #edd382;
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  width: min(90%, 1360px);
+  margin: 30px auto;
+
+  background-color: $base-color;
+  color: $text-color;
+}
