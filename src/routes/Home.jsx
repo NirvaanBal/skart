@@ -1,9 +1,11 @@
+import Book from '../components/Book';
+
 function Home({ books }) {
   return (
     <div className="books">
       {books.map((book) => (
         <div className="book" key={book.id}>
-          {book.title}
+          <Book book={book} />
         </div>
       ))}
     </div>
