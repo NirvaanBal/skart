@@ -3,9 +3,9 @@ import Button from '../components/Button';
 
 function Home({ books, addToCart }) {
   return (
-    <>
+    <div className="home">
       <h2>All Books</h2>
-      <div className="books">
+      <section className="books">
         {books.map((book) => (
           <figure key={book.id}>
             <Book book={book} width={400} />
@@ -14,8 +14,8 @@ function Home({ books, addToCart }) {
             </Button>
           </figure>
         ))}
-      </div>
-    </>
+      </section>
+    </div>
   );
 }
 
