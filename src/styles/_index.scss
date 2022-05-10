@@ -11,10 +11,10 @@
 }
 
 $text-color: #020122;
-$base-color: #f2f3ae;
+$base-color: #fff;
 $primary-color: #f4442e;
 $secondary-color: #fc9e4f;
-$tertiary-color: #edd382;
+$tertiary-color: #f2f3ae;
 
 body {
   font-family: 'Quicksand', sans-serif;
@@ -29,6 +29,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   border-bottom: solid 2px $text-color;
   margin: 20px 0;
@@ -46,6 +47,7 @@ header {
     padding: 10px;
     border: none;
     outline: none;
+    background-color: $tertiary-color;
   }
 }
 
