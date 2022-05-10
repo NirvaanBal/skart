@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './routes/Home';
@@ -31,6 +31,17 @@ function App() {
     setCart([...cart].filter((book) => book.id !== bookId));
   };
 
+  const updateCount = (e) => {
+    const action = e.target.innerText === '-' ? 'dec' : 'inc';
+    const bookId = +e.target.dataset.id;
+    const book = cart.find((book) => book.id === bookId);
+    if (action === 'dec') book.count -= 1;
+    else book.count += 1;
+
+    if (book.count < 1) removeFromCart(e);
+    else setCart([...cart]);
+  };
+
   return (
     <Router>
       <header>
@@ -45,7 +56,13 @@ function App() {
           />
           <Route
             path="cart"
-            element={<Cart cart={cart} removeFromCart={removeFromCart} />}
+            element={
+              <Cart
+                cart={cart}
+                removeFromCart={removeFromCart}
+                changeCount={updateCount}
+              />
+            }
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
