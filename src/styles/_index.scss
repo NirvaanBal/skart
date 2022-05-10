@@ -61,8 +61,7 @@ nav {
     text-align: center;
   }
 
-  .books,
-  .items {
+  .books {
     column-width: 300px;
     column-gap: 20px;
 
@@ -88,30 +87,23 @@ nav {
           color: $primary-color;
         }
       }
-
-      button {
-        background-color: $primary-color;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        color: $base-color;
-        padding: 10px 0;
-
-        &:hover {
-          color: $text-color;
-          background-color: $secondary-color;
-        }
-      }
     }
   }
 }
 
 .cart {
   .items {
-    column-width: 200px;
+    display: flex;
+    flex-direction: column;
 
     figure {
-      padding: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: solid 2px $text-color;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }
