@@ -39,6 +39,14 @@ header {
   top: 0;
 
   background-color: $base-color;
+
+  #search {
+    flex: 1;
+    border-radius: 7px;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
 }
 
 a {

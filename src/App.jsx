@@ -60,7 +60,13 @@ function App() {
     <Router>
       <header>
         <h1>Skart</h1>
-        <input type="search" id="search" autoFocus onInput={searchBook} />
+        <input
+          type="search"
+          id="search"
+          autoFocus
+          onInput={searchBook}
+          placeholder="Search books/authors..."
+        />
         <Navbar items={cart.length > 0 ? cart.length : 0} />
       </header>
       <main>
