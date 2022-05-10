@@ -48,13 +48,13 @@ function Cart({ cart, removeFromCart, changeCount, placeOrder }) {
         <h3>Your cart is empty!</h3>
       )}
       {cart.length > 0 && (
-        <>
-          <h3 style={{ textAlign: 'right' }}>
+        <div className="cart-total">
+          <h3>
             Total: {'\u20B9'}
             {calculateTotal()}
           </h3>
           <Button handleClick={goHome}>Place Order</Button>
-        </>
+        </div>
       )}
     </div>
   );

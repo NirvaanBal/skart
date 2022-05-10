@@ -136,4 +136,23 @@ nav {
       }
     }
   }
+
+  .cart-total {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    * {
+      margin-left: auto;
+    }
+
+    button {
+      background-color: $text-color;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $tertiary-color;
+      }
+    }
+  }
 }
