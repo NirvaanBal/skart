@@ -20,7 +20,7 @@ function Home({ books, addToCart }) {
     </div>
   ) : (
     <div className="home">
-      <h2>No book/author matches your search.</h2>
+      <h2 style={{ marginTop: '180px' }}>No book/author matches your search.</h2>
     </div>
   );
 }
