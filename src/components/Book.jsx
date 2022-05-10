@@ -1,11 +1,10 @@
 function Book({ book, width, cart }) {
   const imageTitle = book.title.split(' ').join('-').toLowerCase();
-
-  const bookImage = `/skart/images/${imageTitle}.jpg`;
+  const bookImage = `/skart/${imageTitle}.jpg`;
 
   return (
     <>
-      <img loading="lazy" src={bookImage} width={width} />
+      <img loading="lazy" src={bookImage} alt={book.title} width={width} />
       <figcaption>
         <h3>
           {book.title} {!cart && book.author && `(${book.author})`}
