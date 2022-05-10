@@ -42,10 +42,25 @@ function App() {
     else setCart([...cart]);
   };
 
+  const searchBook = (e) => {
+    const searchValue = e.target.value;
+    const searchedBooks = data.filter((book) => {
+      if (
+        book.title.toLowerCase().includes(searchValue) ||
+        (book.author && book.author.toLowerCase().includes(searchValue))
+      ) {
+        return book;
+      }
+    });
+
+    setBooks(searchedBooks);
+  };
+
   return (
     <Router>
       <header>
         <h1>Skart</h1>
+        <input type="search" id="search" autoFocus onInput={searchBook} />
         <Navbar items={cart.length > 0 ? cart.length : 0} />
       </header>
       <main>
