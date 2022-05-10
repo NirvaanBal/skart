@@ -1,5 +1,10 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './routes/Home';
 import Cart from './routes/Cart';
@@ -74,9 +79,11 @@ function App() {
       <main>
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={<Home books={books} addToCart={addToCart} />}
           />
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/skart" element={<Navigate to="/home" />} />
           <Route
             path="cart"
             element={
