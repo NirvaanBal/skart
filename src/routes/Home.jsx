@@ -2,7 +2,9 @@ import Book from '../components/Book';
 import Button from '../components/Button';
 
 function Home({ books, addToCart }) {
-  return (
+  const found = books.length > 0;
+
+  return found ? (
     <div className="home">
       <h2>All Books</h2>
       <section className="books">
@@ -15,6 +17,10 @@ function Home({ books, addToCart }) {
           </figure>
         ))}
       </section>
+    </div>
+  ) : (
+    <div className="home">
+      <h2>No book/author matches your search.</h2>
     </div>
   );
 }

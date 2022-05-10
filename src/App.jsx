@@ -50,7 +50,7 @@ function App() {
   const placeOrder = () => setCart([]);
 
   const searchBook = (e) => {
-    const searchValue = e.target.value;
+    const searchValue = e.target.value.toLowerCase();
     const searchedBooks = data.filter((book) => {
       if (
         book.title.toLowerCase().includes(searchValue) ||
