@@ -13,7 +13,17 @@ function App() {
   const addToCart = (e) => {
     const bookId = +e.target.dataset.id;
     const book = books.find((book) => book.id === bookId);
-    setCart(cart.concat(book));
+    const bookInCart = cart.find((book) => book.id === bookId);
+
+    if (bookInCart) {
+      bookInCart.count += 1;
+      setCart(
+        cart.filter((item) => item.id !== bookInCart.id).concat(bookInCart)
+      );
+    } else {
+      const bookObj = { ...book, count: 1 };
+      setCart(cart.concat(bookObj));
+    }
   };
 
   const removeFromCart = (e) => {
