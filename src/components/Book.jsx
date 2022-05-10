@@ -1,5 +1,5 @@
 function Book({ book, width, cart }) {
-  const bookImage = `../src/assets/${book.title
+  const bookImage = `images/${book.title
     .split(' ')
     .join('-')
     .toLowerCase()}.jpg`;
