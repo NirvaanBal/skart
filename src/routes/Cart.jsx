@@ -1,7 +1,10 @@
 import Book from '../components/Book';
 import Button from '../components/Button';
+import { useNavigate } from 'react-router-dom';
 
-function Cart({ cart, removeFromCart, changeCount }) {
+function Cart({ cart, removeFromCart, changeCount, placeOrder }) {
+  const navigate = useNavigate();
+
   const calculateTotal = () => {
     if (cart.length > 0) {
       let price = 0;
@@ -11,6 +14,11 @@ function Cart({ cart, removeFromCart, changeCount }) {
 
       return price;
     }
+  };
+
+  const goHome = () => {
+    placeOrder();
+    navigate('/');
   };
 
   return (
@@ -40,10 +48,13 @@ function Cart({ cart, removeFromCart, changeCount }) {
         <h3>Your cart is empty!</h3>
       )}
       {cart.length > 0 && (
-        <h3 style={{ textAlign: 'center' }}>
-          Total: {'\u20B9'}
-          {calculateTotal()}
-        </h3>
+        <>
+          <h3 style={{ textAlign: 'right' }}>
+            Total: {'\u20B9'}
+            {calculateTotal()}
+          </h3>
+          <Button handleClick={goHome}>Place Order</Button>
+        </>
       )}
     </div>
   );

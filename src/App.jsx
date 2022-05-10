@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './routes/Home';
@@ -42,6 +42,8 @@ function App() {
     else setCart([...cart]);
   };
 
+  const placeOrder = () => setCart([]);
+
   const searchBook = (e) => {
     const searchValue = e.target.value;
     const searchedBooks = data.filter((book) => {
@@ -82,6 +84,7 @@ function App() {
                 cart={cart}
                 removeFromCart={removeFromCart}
                 changeCount={updateCount}
+                placeOrder={placeOrder}
               />
             }
           />
