@@ -10,6 +10,11 @@ function Cart({ cart, removeFromCart }) {
           {cart.map((book) => (
             <figure key={book.id}>
               <Book book={book} width={100} cart={true} />
+              <div>
+                <Button>-</Button>
+                {book.count}
+                <Button>+</Button>
+              </div>
               <Button id={book.id} handleClick={removeFromCart}>
                 Remove from Cart
               </Button>
