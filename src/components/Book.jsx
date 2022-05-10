@@ -15,7 +15,6 @@ function Book({ book, width, cart }) {
           {'\u20B9'}
           {!cart ? `${book.price}` : `${book.price * book.count}`}
         </h4>
-        {!cart && <p>{`${book.description.substring(0, 50)}...`}</p>}
       </figcaption>
     </>
   );

@@ -3,68 +3,58 @@
     "id": 1,
     "title": "Rani Tatt",
     "author": "Harman",
-    "price": 205,
-    "description": "The song springs out of the lips of astral bodies when they espy the drenched air hidden behind the alpine aspens changing her apparel."
+    "price": 205
   },
   {
     "id": 2,
     "title": "All the Letters I should have Sent",
     "author": "Rania Naim",
-    "price": 380,
-    "description": "To the people we loved and the people who couldn’t love us. To the ones who broke our hearts and the ones that got away. To the ones who loved us and the ones who healed us. To the ones who made us ask important questions and the ones who gave us the answers. To all the people who once came into our lives and left an impact, left a mark or left a scar. This book is for you."
+    "price": 380
   },
   {
     "id": 3,
     "title": "Beautiful Resistance",
     "author": "Jon Tyson",
-    "price": 393,
-    "description": "In a time of compromise and disillusionment, God is calling his people to a movement of beautiful resistance."
+    "price": 393
   },
   {
     "id": 4,
     "title": "Failed It",
     "author": "Erik Kessels",
-    "price": 414,
-    "description": "A fun and fabulous take on the art of making mistakes. Erik Kessels celebrates imperfection and failure and shows why they are an essential part of the creative process."
+    "price": 414
   },
   {
     "id": 5,
     "title": "How Innovation Works",
     "author": "Matt Ridley",
-    "price": 365,
-    "description": "Far from there being too much innovation, we may be on the brink of an innovation famine."
+    "price": 365
   },
   {
     "id": 6,
     "title": "Milk and Honey",
     "author": "Rupi Kaur",
-    "price": 349,
-    "description": "Reading books is a kind of enjoyment. Reading books is a good habit. We bring you a different kinds of books. You can carry this book where ever you want. It is easy to carry. It can be an ideal gift to yourself and to your loved ones. Care instruction keep away from fire."
+    "price": 349
   },
   {
     "id": 7,
     "title": "Self Help Bundle",
-    "price": 1000,
-    "description": "A collection of world's timeless classics, this box set includes the four greatest bestsellers, which have inspired readers for generations. Packed with wisdom and time-tested principles that are as relevant in modern times as ever before, these inspirational books are a must-read for all those aspiring for personal growth and wealth."
+    "price": 1000
   },
   {
     "id": 8,
     "title": "Startup Bundle",
-    "price": 1299,
-    "description": "Do you want to start a long-term online business and don’t know where to look? We got you covered."
+    "price": 1299
   },
   {
     "id": 9,
     "title": "The Art of Making Memories",
     "author": "Meik Wiking",
-    "price": 449,
-    "description": "Written in warm and funny trademark style, filled with infographics, illustrations, and photographs, and featuring \"Happy Memory Tips\", The Art of Making Memoriesis a life-affirming read which show you it's easier than you think to make your life unforgettable."
+    "price": 449
   },
   {
     "id": 10,
     "title": "The Burden is Light",
     "author": "Jon Tyson",
-    "price": 404,
-    "description": "A NYC pastor and global influencer inspires readers to find their most meaningful and purposeful life. Surprising to many, this life is not measured by success, comparison, or accolades. Rather, free and joyful living stems from a God-centered celebration of our union with Christ and the lives of those around us."
+    "price": 404
   }
 ]
