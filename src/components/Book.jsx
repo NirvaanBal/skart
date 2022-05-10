@@ -1,8 +1,7 @@
 function Book({ book, width, cart }) {
-  const bookImage = `images/${book.title
-    .split(' ')
-    .join('-')
-    .toLowerCase()}.jpg`;
+  const imageTitle = book.title.split(' ').join('-').toLowerCase();
+
+  const bookImage = `/images/${imageTitle}.jpg`;
 
   return (
     <>
