@@ -1,6 +1,6 @@
 # Skart
 
-A trivial E-commerce app sans payment mechanism.
+A trivial E-commerce app sans payment mechanism. [Live here](https://nirvaanbal.github.io/skart/).
 
 ## Features
 
@@ -14,6 +14,7 @@ A trivial E-commerce app sans payment mechanism.
 ## Tech Stack
 
 - React
+- React Router
 - Sass
 - Vite
 
