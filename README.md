@@ -18,6 +18,10 @@ A trivial E-commerce app sans payment mechanism. [Live here](https://nirvaanbal.
 - Sass
 - Vite
 
+## Raison d'être
+
+This decent sized React project was built to learn routing with react-router-dom.
+
 ## Bibliography
 
 - Project Idea - [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart)
